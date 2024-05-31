@@ -1,0 +1,12 @@
+[package]
+name = "sel4-rust-example-x86_64"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+sel4-sys = { path = "rust-sel4/crates/sel4/sys" }
+
+[profile.release]
+# Rust does not inline functions across modules without lto
+# which may be confusing when disassembling the binary
+lto = "fat"

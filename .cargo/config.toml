@@ -1,0 +1,14 @@
+[build]
+target = "rust-sel4/support/targets/x86_64-sel4.json"
+out-dir = "target/out"
+
+[unstable]
+unstable-options = true
+build-std = ["core"]
+build-std-features = ["compiler-builtins-mem"]
+
+[target.x86_64-sel4]
+rustflags = ["-C", "panic=abort"]
+
+[env]
+SEL4_PREFIX = { value = "seL4/install", relative = true }
