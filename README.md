@@ -21,7 +21,7 @@ qemu-system-x86_64 \
 -kernel target/out/kernel32.elf \
 -initrd target/out/sel4-rust-example-x86_64.elf
 ```
-alternatively on any modern cpu with virtulization support enabled you can use
+alternatively on any modern cpu with virtualization support enabled you can use
 ```
 qemu-system-x86_64 \
 -accel kvm \
